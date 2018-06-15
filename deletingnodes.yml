@@ -1,0 +1,20 @@
+---
+- name: deleting nodes - lab2
+  hosts: bigip-a
+  connection: local
+  vars:
+    user: admin
+    password: H@ims1234
+    
+  tasks:
+     - name: Delete node using bigip_node module
+       bigip_node:
+           server: "{{ inventory_hostname }}"
+           user: "{{ user }}"
+           password: "{{ password }}"
+           validate_certs: no
+           state: absent
+           name: "Server1"
+      delegate_to: localhost
+      
+...
