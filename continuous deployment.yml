@@ -18,7 +18,7 @@
 # These are the tasks to run before applying updates:
   pre_tasks:
   - name: disable nagios alerts for this host webserver service
-   nagios: action_disable_alerts_host-{{ ansible_hostname }} services=webserver
+  - nagios: action_disable_alerts_host-{{ ansible_hostname }} services=webserver
    delegate_to: "{{ item }}"
    with_items: groups.monitoring
    
