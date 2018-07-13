@@ -23,10 +23,10 @@
     with_items: groups.monitoring
    
    
- - name: disable the server in haproxy
-   shell: echo "disable server myapplb/{{ ansible_hostname }}" | socat stdio /var/lib/haproxy/stats
-   delegate_to: "{{ item }}"
-   with_items: groups.lbservers
+  - name: disable the server in haproxy
+    shell: echo "disable server myapplb/{{ ansible_hostname }}" | socat stdio /var/lib/haproxy/stats
+    delegate_to: "{{ item }}"
+    with_items: groups.lbservers
    
    roles:
      - common
