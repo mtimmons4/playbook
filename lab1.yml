@@ -14,5 +14,5 @@
            name: "Tower Server 1"
         delegate_to: localhost
         
-  ...
+...
   
