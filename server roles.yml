@@ -28,7 +28,7 @@
   roles:
   -haproxy
   
-#Configure and deploy the Nagios monitoring mode(s).
+# Configure and deploy the Nagios monitoring mode(s).
 - hosts: monitoring
   user: root
   roles: 
