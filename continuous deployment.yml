@@ -28,7 +28,7 @@
     delegate_to: "{{ item }}"
     with_items: groups.lbservers
    
-   roles:
+  - roles:
      - common
      - base-apache
      - web
